@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*________________________*\
+
+*    BASE
+
+\*________________________*/
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {  
+  @apply bg-zinc-900 text-zinc-50 h-[200vh];
+}
+
+
+/*________________________*\
+
+*    Utilities Classes
+
+\*________________________*/
+
+.material-symbols-rounded {
+  @apply w-[1em] h-[1em] overflow-hidden;
+  font-variation-settings:  'FILL' 0 , 'wght' 400, 'GRAD' 0,'opsz' 24;
+}
+
+/*________________________*\
+
+*    Components
+
+\*________________________*/
+
+
+/* Menu btn */
+
+.menu-btn {
+  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95;
+}
+
+/* Navbar */
+.navbar{
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl
+}
+
+.navbar.active {
+  @apply opacity-100 scale-100 blur-0 visible
+}
+
+.nav-link { 
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors
+}
+
+.nav-link.active { 
+    @apply text-zinc-900 duration-500
+}
+
+.navbar .active-box {
+  @apply absolute bg-zinc-50 rounded-lg -z-10 transition-[top,left] duration-500
+}
+
+
+/* Button */
+.btn {
+  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color]
+}
+
+.btn-secondary {
+
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
+}
