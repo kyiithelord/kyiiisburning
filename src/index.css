@@ -53,6 +53,11 @@ body {
 .headline-1 {
   @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15];
 }
+
+.section {
+  @apply pt-20 lg:pt-32 
+}
+
 /*________________________*\
 
 *    Components
