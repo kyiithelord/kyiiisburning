@@ -14,6 +14,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Work from './components/Work'
 import Services from './components/Services'
+import Contact from './components/Contact'
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Skills/>
         <Work/>
         <Services/>
+        <Contact/>
       </main>
     </>
   )
