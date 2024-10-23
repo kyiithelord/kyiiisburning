@@ -15,6 +15,7 @@ import Skills from './components/Skills'
 import Work from './components/Work'
 import Services from './components/Services'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Services/>
         <Contact/>
       </main>
+      <Footer/>
     </>
   )
    
