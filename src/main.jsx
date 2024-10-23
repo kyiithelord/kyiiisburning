@@ -13,6 +13,8 @@ import App from './App.jsx'
 
 // CSS
 import './index.css'
+// Css import from lenis scroll library
+import 'lenis/dist/lenis.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

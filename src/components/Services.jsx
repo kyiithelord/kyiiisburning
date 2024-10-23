@@ -4,6 +4,19 @@
  */
 
 
+/**
+ * Node Modules from GSAP library
+ */
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+
+
+/**
+ * Register GASP plugins
+ */
+gsap.registerPlugin(useGSAP,ScrollTrigger);
+
 import React from 'react'
 import ServiceCard from './ServiceCard';
 
@@ -32,13 +45,24 @@ const services = [
 
 
 const Services = () => {
+  useGSAP(()=>{
+    gsap.to('.scrub-slide',{
+      scrollTrigger: {
+        trigger: '.scrub-slide',
+        start:'-200% 80%',
+        end: '400% 80%',
+        scrub: true
+      },
+      x: '-900'
+    })
+  })
   return (
     <section id='services' className='section overflow-hidden' >
         <div className="container">
-            <h2 className="headline-2 mb-8 ">
+            <h2 className="headline-2 mb-8 reveal-up">
                   The services I’m willing to pay you for.
             </h2>
-            <div className="flex items-stretch gap-3 w-fit">
+            <div className="scrub-slide flex items-stretch gap-3 w-fit">
                 {services.map(({content,imgSrc},key)=>
                     (
                         <ServiceCard 
