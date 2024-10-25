@@ -36,9 +36,12 @@ const Hero = () => {
 
               <div className="flex  items-center gap-3 ">
                 
-                <ButtonPrimary
-                  label='Download CV'
-                  icon='download'
+              <ButtonPrimary
+                    href="./cv/CvForm.pdf"
+                    label="Download CV"
+                    icon="download"
+                    classes="extra-classes"
+                    download // Enables the download attribute
                 />
                 <ButtonOutline
                   href='#about'
