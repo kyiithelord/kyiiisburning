@@ -14,34 +14,43 @@ import PropTypes from 'prop-types'
 const ButtonPrimary = ({
     href,
     target = '_self',
-    label ,
-    icon ,
-    classes
+    label,
+    icon,
+    classes,
+    download // New prop for download functionality
 }) => {
-    if(href){
+    if (href) {
         return (
-            <a href={href} target={target} className={"btn btn-primary " + classes } >
+            <a
+                href={href}
+                target={target}
+                className={"btn btn-primary " + classes}
+                download={download ? href.split('/').pop() : undefined} // Set download attribute if download prop is true
+            >
                 {label}
-
-                {icon ? <span className="material-symbols-rounded" aria-hidden='true' >
-                    {icon}
-                </span> 
-                : undefined }
+                {icon ? (
+                    <span className="material-symbols-rounded" aria-hidden="true">
+                        {icon}
+                    </span>
+                ) : undefined}
             </a>
-        )
+        );
     } else {
         return (
-            <button className={'btn btn-primary ' + classes } >
+            <button className={'btn btn-primary ' + classes}>
                 {label}
-                
-                {icon ? <span className="material-symbols-rounded" aria-hidden='true' >
-                    {icon}
-                </span> 
-                : undefined }
+                {icon ? (
+                    <span className="material-symbols-rounded" aria-hidden="true">
+                        {icon}
+                    </span>
+                ) : undefined}
             </button>
-        )
+        );
     }
-}
+};
+
+export default ButtonPrimary;
+
 
 ButtonPrimary.PropTypes = {
     labe: PropTypes.string.isRequired,
