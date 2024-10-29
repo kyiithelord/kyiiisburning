@@ -25,7 +25,7 @@ const Hero = () => {
                     <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                   </span>
 
-                  Available for work
+                  Available for Business
 
                 </div>
               </div>
