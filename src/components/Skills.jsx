@@ -24,6 +24,16 @@ const skillItem = [
     desc: 'Interaction'
   },
   {
+    imgSrc: './img/python.jpg',
+    label: 'Python',
+    desc: 'Backend Development'
+  },
+  {
+    imgSrc: './img/postgresql.jpg',
+    label: 'PostgreSQL',
+    desc: 'Database'
+  },
+  {
     imgSrc: './img/njs.jpg',
     label: 'NodeJS',
     desc: 'Web Server'
@@ -32,6 +42,11 @@ const skillItem = [
     imgSrc: './img/cloudServer.jpg',
     label: 'Cloud Server',
     desc: 'Database'
+  },
+  {
+    imgSrc: './img/graphql.jpg',
+    label: 'GraphQL',
+    desc: 'API Query Language'
   },
   {
     imgSrc: './img/react.jpg',
