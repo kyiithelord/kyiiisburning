@@ -30,16 +30,15 @@ const services = [
       imgSrc: './img/laravelService.jpg',
     },
     {
-      content: 'Three.js is a cross-browser JavaScript library used to create and display animated 3D graphics in a web browser. It leverages WebGL, allowing developers to render 3D objects with GPU acceleration directly in the browser.',
-      imgSrc: './img/3jsService.jpg',
-    },
-    {
       content: 'Cloud servers provide scalable, virtualized resources over the internet, allowing businesses to run applications, store data, and manage workloads without investing in physical infrastructure.',
       imgSrc: './img/cloudService.jpg',
     },
     {
       content: 'Tailwind CSS is a utility-first CSS framework that allows developers to design websites directly in their markup, using predefined classes for styling. It offers flexibility and customizability, without imposing design constraints.',
       imgSrc: './img/tailwindService.jpg',
+    }, {
+      content: 'Three.js is a cross-browser JavaScript library used to create and display animated 3D graphics in a web browser. It leverages WebGL, allowing developers to render 3D objects with GPU acceleration directly in the browser.',
+      imgSrc: './img/3jsService.jpg',
     }
   ];
 
