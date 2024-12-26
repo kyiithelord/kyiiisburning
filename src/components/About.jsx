@@ -38,7 +38,7 @@ const About = () => {
                             </div>
                         ) )
                     }
-                    <img src="./img/logo_svg.jpg" alt="logo" width={30} height={30} className="ml-auto md:w-[40px] md:h-[40px]" />
+                    <img src="./img/logo_svg.jpg" alt="logo" width={30} height={30} className="ml-auto md:w-[40px] md:h-[40px] rounded-lg" />
 
                 </div>
             </div>
