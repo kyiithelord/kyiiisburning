@@ -52,8 +52,8 @@ const ButtonPrimary = ({
 export default ButtonPrimary;
 
 
-ButtonPrimary.PropTypes = {
-    labe: PropTypes.string.isRequired,
+ButtonPrimary.propTypes = {
+    label: PropTypes.string.isRequired,
     href: PropTypes.string,
     target: PropTypes.string,
     icon: PropTypes.string,
@@ -96,8 +96,8 @@ const ButtonOutline = ({
     }
 }
 
-ButtonOutline.PropTypes = {
-    labe: PropTypes.string.isRequired,
+ButtonOutline.propTypes = {
+    label: PropTypes.string.isRequired,
     href: PropTypes.string,
     target: PropTypes.string,
     icon: PropTypes.string,

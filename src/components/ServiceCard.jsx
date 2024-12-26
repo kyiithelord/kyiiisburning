@@ -4,9 +4,9 @@
  */
 
 
-import React from 'react'
+import React from 'react';
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 
 const ratings = new Array(5);
@@ -35,7 +35,7 @@ const ServiceCard = ({
         
         <div className="flex items-center gap-2 mt-auto">
             <figure className="img-box rounded-lg">
-                <img src={imgSrc} width={44} loading='lazy' height={44} className='img-cover' />
+                <img src={imgSrc} alt="Description of the image" width={44} loading='lazy' height={44} className='img-cover' />
             </figure>
             
         </div>

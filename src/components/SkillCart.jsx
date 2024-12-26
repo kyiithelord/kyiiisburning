@@ -28,7 +28,7 @@ const SkillCart = ({
   )
 }
 
-SkillCart.PropTypes = {
+SkillCart.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
