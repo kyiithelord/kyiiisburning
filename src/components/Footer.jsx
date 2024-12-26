@@ -63,7 +63,7 @@ const Footer = () => {
                     </h2>
 
                     <ButtonPrimary 
-                        href='thetzinkyaw9727@gmail.com'
+                        href='#contact'
                         label='Start project'
                         icon='chevron_right'
                         classes='reveal-up'
