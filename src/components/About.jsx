@@ -23,7 +23,7 @@ const About = () => {
         <div className="container">
             <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
                 <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch] ">
-                    Welcome! I&apos;m Thet Zin Kyaw,a professional WEB Developer specializing in building responsive and dynamic web applications. I&apos;m proficient in technologies like HTML, CSS, JavaScript, React, Laravel, and Tailwind. My passion lies in crafting immersive user experiences and scalable, efficient backend systems.
+                    Welcome! I&apos;m Thet Zin Kyaw,a professional WEB Developer specializing in building responsive and dynamic web applications. I focus on delivering seamless, user-centric solutions that are both scalable and efficient. My passion lies in crafting immersive user experiences and scalable, efficient backend systems.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4 md:gap-7 ">
