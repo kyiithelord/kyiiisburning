@@ -104,7 +104,7 @@ const Footer = () => {
                 <a href="/" className="logo reveal-up">
                     <img src="./img/logo_svg.jpg" alt="logo" className="rounded-lg" width={40} height={40} />
                 </a>
-                <p className="text-zinc-500 text-sm reveal-up"> &copy; {new Date().getFullYear()} <span className='text-zinc-200' >kyiithelord</span> </p>
+                <p className="text-zinc-500 text-sm reveal-up">Copy Right &copy; {new Date().getFullYear()} <span className='text-zinc-500'>kyiithelord, All Rights Reserved.</span> </p>
             </div>
 
         </div>
