@@ -77,8 +77,9 @@ const Skills = () => {
         <h2 className="headline-2 reveal-up">
             Essential Tools I use
         </h2>
-        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] ">
-            Unleash the full potential of modern web development with the cutting-edge tools and technologies I rely on to deliver fast, responsive, and visually stunning websites. From dynamic interfaces to seamless backend integration, each project is crafted to perform at the highest level.
+        <p className="text-zinc-400 mt-3 mb-8">
+            {/* Unleash the full potential of modern web development with the cutting-edge tools and technologies I rely on to deliver fast, responsive, and visually stunning websites. From dynamic interfaces to seamless backend integration, each project is crafted to perform at the highest level. */}
+            Harness the power of modern web development with advanced tools and technologies to create fast, responsive, and visually compelling websites. Every project is meticulously designed to combine dynamic interfaces with seamless backend integration, ensuring optimal performance and a superior user experience.
         </p>
         <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
           {
