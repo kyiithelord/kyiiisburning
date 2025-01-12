@@ -35,15 +35,15 @@ const Hero = () => {
               </h2>
 
               <div className="flex  items-center gap-3 ">
-                
+{/*                 
               <ButtonPrimary
                     href="./cv/me.pdf"
                     label="Download CV"
                     icon="download"
                     classes="extra-classes"
                     download // Enables the download attribute
-                />
-                <ButtonOutline
+                /> */}
+                <ButtonPrimary
                   href='#about'
                   label='Scroll down'
                   icon='arrow_downward'
