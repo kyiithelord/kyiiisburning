@@ -34,21 +34,25 @@ const sitemap = [
       label: 'GitHub',
       href: 'https://github.com/kyiithelord'
     },
+    // {
+    //   label: 'Thread',
+    //   href: 'https://www.threads.net/@kyiithelord'
+    // },
+    // {
+    //   label: 'Twitter X',
+    //   href: 'https://x.com/kyithelord?s=21'
+    // },
+    // {
+    //   label: 'Instagram',
+    //   href: 'https://www.instagram.com/kyiithelord?igsh=MW5vbnVoMnJpOW90YQ%3D%3D&utm_source=qr'
+    // },
+    // {
+    //   label: 'Behance',
+    //   href: 'https://www.behance.net/thetzkyii'
+    // },
     {
-      label: 'Thread',
-      href: 'https://www.threads.net/@kyiithelord'
-    },
-    {
-      label: 'Twitter X',
-      href: 'https://x.com/kyithelord?s=21'
-    },
-    {
-      label: 'Instagram',
-      href: 'https://www.instagram.com/kyiithelord?igsh=MW5vbnVoMnJpOW90YQ%3D%3D&utm_source=qr'
-    },
-    {
-      label: 'Behance',
-      href: 'https://www.behance.net/thetzkyii'
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/kyiithelord'
     }
   ];
 
