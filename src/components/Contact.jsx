@@ -5,6 +5,11 @@
 
 import React from 'react'
 
+// import emailjs for email
+import  { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import  { useState } from 'react';
+
 
 const socialLinks = [
     {
@@ -41,6 +46,50 @@ const socialLinks = [
   ];
 
 const Contact = () => {
+    const [name,setName] = useState('');
+    const [email,setEmail] = useState('');
+    const [message,setMessage] = useState('');
+    const [success,setSuccess] = useState('');
+    const [loading, setLoading] = useState(false); // Loading state
+
+    const handleName = (e) => {
+       setName(e.target.value)
+    };
+    const handleEmail = (e) => {
+      setEmail(e.target.value)
+    };
+    const handleMessage = (e) => {
+      setMessage(e.target.value)
+    };
+
+
+
+
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setLoading(true); // Start loading
+        setSuccess(""); // Reset success message before sending
+    
+        emailjs
+          .sendForm('service_bcwn106', 'template_kk6kcwb', form.current, {
+            publicKey: 'qYJ5JHVD94hs0FAk2',
+          })
+          .then(
+            () => {
+              setLoading(false); // Stop loading
+              setName('');
+              setEmail('');
+              setMessage('');
+              setSuccess('Message Sent Successfully.')
+            },
+            (error) => {
+              setLoading(false); // Stop loading on failure
+              console.log('FAILED...', error.text);
+            },
+          );
+      };
+    
   return (
     <section id='contact' className='section'>
         <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
@@ -60,21 +109,21 @@ const Contact = () => {
                 </div>
             </div>
 
-            <form action="https://getform.io/f/bxoojyka" method='POST' className='xl:pl-10 2xl:pl-20' >
+            <form ref={form} onSubmit={sendEmail} className='xl:pl-10 2xl:pl-20' >
                     <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
                         <div className="mb-4">
-                            <label htmlFor="name" className='label reveal-up' >
+                            <label htmlFor="from_name" className='label reveal-up' >
                                 Name
                             </label>
-                            <input type="text" name="name" id="name" autoComplete='name' required placeholder='Enter your name' className='text-field reveal-up' />
+                            <input type="text" name="from_name" id="from_name" autoComplete='name' value={name} onChange={handleName} required placeholder='Enter your name' className='text-field reveal-up' />
                         </div>
 
 
                         <div className="mb-4">
-                            <label htmlFor="email" className='label reveal-up' >
+                            <label htmlFor="from_email" className='label reveal-up' >
                                 Email
                             </label>
-                            <input type="text" name="email" id="email" autoComplete='email' required placeholder='Enter your email' className='text-field reveal-up' />
+                            <input type="email" name="from_email" id="from_email" autoComplete='email' value={email} onChange={handleEmail} required placeholder='Enter your email' className='text-field reveal-up' />
                         </div>
                     </div>
 
@@ -82,13 +131,14 @@ const Contact = () => {
                         <label htmlFor="message" className='label reveal-up'>
                             Message
                         </label>
-                        <textarea name="message" id="message" required placeholder='Type your message here...' className="text-field resize-y min-h-32 max-h-80 reveal-up" >
+                        <textarea name="message" id="message" required placeholder='Type your message here...' value={message} onChange={handleMessage} className="text-field resize-y min-h-32 max-h-80 reveal-up" >
 
                         </textarea>
                     </div>
 
-                    <button type='submit' className='btn btn-primary [&]:max-w-full w-full justify-center reveal-up'>
-                        Submit
+                    <button type='submit' className='btn btn-primary [&]:max-w-full w-full justify-center reveal-up' disabled={loading}>
+                        {loading ? <img src="./img/spinner.svg" alt="Loading" className="w-6 h-6 animate-spin" /> : !success ? "Submit" : ""}
+                        <p>{success}</p>
                     </button>
             </form>
         </div>

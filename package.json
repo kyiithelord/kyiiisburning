@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.1",
+    "emailjs": "^4.0.3",
     "gsap": "^3.12.5",
     "lenis": "^1.1.14",
     "prop-types": "^15.8.1",
