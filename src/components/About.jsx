@@ -23,7 +23,7 @@ const About = () => {
         <div className="container">
             <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
                 <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl">
-                    Welcome! <br /> I&apos;m Thet Zin Kyaw,a dedicated and professional Web Developer passionate about crafting responsive and dynamic web applications that truly make an impact. I specialize in creating seamless user experiences, blending elegant designs with robust backend systems to deliver solutions that are scalable, efficient, and user-centric.
+                    Welcome! <br /> I&apos;m Thet Zin Kyaw,a dedicated and professional Software Developer passionate about crafting responsive and dynamic web applications that truly make an impact. I specialize in creating seamless user experiences, blending elegant designs with robust backend systems to deliver solutions that are scalable, efficient, and user-centric.
                     <br />
                     Whether it's developing custom features, integrating APIs, or enhancing website performance, I aim to exceed expectations and contribute to the success of every project I work on. Beyond technical skills, I value collaboration, creativity, and a growth-oriented mindset, making every step of the development process meaningful.
                 </p>
