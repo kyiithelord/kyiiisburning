@@ -1,3 +1,8 @@
+/**
+ *  @copyright 2024 kyiithelord
+ *  @license Apache-2.0
+ */
+
 import React, { useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 

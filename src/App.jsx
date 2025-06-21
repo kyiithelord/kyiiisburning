@@ -1,3 +1,8 @@
+/**
+ *  @copyright 2024 kyiithelord
+ *  @license Apache-2.0
+ */
+
 import React from 'react';
 import { ReactLenis } from 'lenis/react';
 import { gsap } from 'gsap';
