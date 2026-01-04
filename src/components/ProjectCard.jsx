@@ -42,7 +42,7 @@ const ProjectCard = ({
                 </div>
             </div>
 
-            <a href={projectLink} target='_blank' className='absolute inset-0 '></a>
+            <a href={projectLink} target='_blank' rel="noopener noreferrer" className='absolute inset-0 '></a>
         </div>
   )
 }
