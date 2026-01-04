@@ -52,7 +52,7 @@ const sitemap = [
     // },
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/kyiithelord'
+      href: 'https://www.linkedin.com/in/thetzkyii'
     }
   ];
 
@@ -94,7 +94,7 @@ const Footer = () => {
                             {socials.map(({label,href},key)=>
                             (
                                 <li key={key}>
-                                     <a href={href} target='_blank' className='block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up' > {label} </a>
+                                     <a href={href} target='_blank' rel="noopener noreferrer" className='block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up' > {label} </a>
 
                                 </li>
                             ))}
@@ -106,7 +106,7 @@ const Footer = () => {
 
             <div className="flex items-center justify-between pt-10 mb-8">
                 <a href="/" className="logo reveal-up">
-                    <img src="./img/logo_svg.jpg" alt="logo" className="rounded-lg" width={40} height={40} />
+                    <img src="./img/logo_svg.jpg" alt="logo" className="rounded-lg" width={40} height={40} loading="lazy" />
                 </a>
                 <p className="text-zinc-500 text-sm reveal-up">Copy Right &copy; {new Date().getFullYear()} <span className='text-zinc-500'>kyiithelord, All Rights Reserved.</span> </p>
             </div>

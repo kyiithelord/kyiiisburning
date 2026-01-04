@@ -10,6 +10,11 @@ import  { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import  { useState } from 'react';
 
+// EmailJS configuration strictly from environment
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 
 const socialLinks = [
     {
@@ -50,6 +55,7 @@ const Contact = () => {
     const [email,setEmail] = useState('');
     const [message,setMessage] = useState('');
     const [success,setSuccess] = useState('');
+    const [error,setError] = useState('');
     const [loading, setLoading] = useState(false); // Loading state
 
     const handleName = (e) => {
@@ -68,12 +74,19 @@ const Contact = () => {
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
-        setLoading(true); // Start loading
         setSuccess(""); // Reset success message before sending
-    
+        setError(""); // Reset error message
+
+        if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+          setError('Email service is not configured. Please set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY in your .env file.');
+          return;
+        }
+
+        setLoading(true); // Start loading
+
         emailjs
-          .sendForm('service_bcwn106', 'template_kk6kcwb', form.current, {
-            publicKey: 'qYJ5JHVD94hs0FAk2',
+          .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+            publicKey: PUBLIC_KEY,
           })
           .then(
             () => {
@@ -85,7 +98,8 @@ const Contact = () => {
             },
             (error) => {
               setLoading(false); // Stop loading on failure
-              console.log('FAILED...', error.text);
+              console.log('FAILED...', error?.text || error);
+              setError('Failed to send message. Please try again.');
             },
           );
       };
@@ -102,14 +116,14 @@ const Contact = () => {
                 </p>
                 <div className="flex items-center gap-2 mt-auto">
                     {socialLinks.map(({href,icon},key) => (
-                        <a key={key} href={href} target='_blank' className='w-12 h-12 grid place-items-center ring-inset ring-2  ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-sky-500 hover:text-zinc-950 active:bg-zinc-50/80 reveal-up'  >
+                        <a key={key} href={href} target='_blank' rel="noopener noreferrer" className='w-12 h-12 grid place-items-center ring-inset ring-2  ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-sky-500 hover:text-zinc-950 active:bg-zinc-50/80 reveal-up'  >
                             {icon}
                         </a>
                     ))}
                 </div>
             </div>
 
-            <form ref={form} onSubmit={sendEmail} className='xl:pl-10 2xl:pl-20' >
+            <form ref={form} onSubmit={sendEmail} className='xl:pl-10 2xl:pl-20' aria-busy={loading} aria-live="polite">
                     <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
                         <div className="mb-4">
                             <label htmlFor="from_name" className='label reveal-up' >
@@ -131,15 +145,28 @@ const Contact = () => {
                         <label htmlFor="message" className='label reveal-up'>
                             Message
                         </label>
-                        <textarea name="message" id="message" required placeholder='Type your message here...' value={message} onChange={handleMessage} className="text-field resize-y min-h-32 max-h-80 reveal-up" >
+                        <textarea name="message" id="message" required minLength={10} placeholder='Type your message here...' value={message} onChange={handleMessage} className="text-field resize-y min-h-32 max-h-80 reveal-up" >
 
                         </textarea>
                     </div>
 
-                    <button type='submit' className='btn btn-primary [&]:max-w-full w-full justify-center reveal-up' disabled={loading}>
-                        {loading ? <img src="./img/spinner.svg" alt="Loading" className="w-6 h-6 animate-spin" /> : !success ? "Submit" : ""}
-                        <p>{success}</p>
+                    <button type='submit' className='btn btn-primary [&]:max-w-full w-full justify-center reveal-up' disabled={loading} aria-busy={loading}>
+                        {loading ? (
+                          <span className="inline-flex items-center gap-2">
+                            <img src="./img/spinner.svg" alt="Loading" className="w-5 h-5 animate-spin" />
+                            <span>Sending…</span>
+                          </span>
+                        ) : (
+                          'Submit'
+                        )}
                     </button>
+
+                    {success && (
+                      <p className="mt-3 text-emerald-400 reveal-up">{success}</p>
+                    )}
+                    {error && (
+                      <p className="mt-3 text-red-400 reveal-up">{error}</p>
+                    )}
             </form>
         </div>
     </section>
