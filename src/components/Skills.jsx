@@ -67,6 +67,26 @@ const skillItem = [
     imgSrc: './img/3js.jpg',
     label: 'Three JS',
     desc: 'JavaScript 3D graphics library'
+  },
+  {
+    imgSrc: './img/odoo.jpg',
+    label: 'Odoo',
+    desc: 'Business ERP Platform'
+  },
+  {
+    imgSrc: './img/owl.jpg',
+    label: 'OWL Js',
+    desc: 'Reactive UI Framework'
+  },
+  {
+    imgSrc: './img/docker.jpg',
+    label: 'Docker',
+    desc: 'Containerization'
+  },
+  {
+    imgSrc: './img/supabase.jpg',
+    label: 'Supabase',
+    desc: 'Backend Platform'
   }
 ];
 
