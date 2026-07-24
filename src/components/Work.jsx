@@ -23,16 +23,22 @@ const works = [
         projectLink: 'https://challence-frontend.netlify.app/'
       },
       {
-        imgSrc: './img/responsive.jpg',
-        title: 'Responsive Customize Website',
-        tags: ['Customize Design', 'Development','Responsive'],
-        projectLink: 'https://lynn-gilang-responsive.netlify.app/#'
+        imgSrc: './img/pos.jpg',
+        title: 'Robust offline sync engine for odoo POS',
+        tags: ['Odoo', 'POS', 'Offline Sync'],
+        projectLink: 'https://apps.odoo.com/apps/modules/19.0/pos_offline_sync_smart'
       },
       {
-        imgSrc: './img/3jsproject.jpg',
-        title: 'Three Js Design on Website',
-        tags: ['3D Design', 'Development',],
-        projectLink: 'https://github.com/kyiithelord/three-native'
+        imgSrc: './img/telegram_noti.png',
+        title: 'Telegram Notification Center',
+          tags: ['Odoo', 'Telegram', 'Notifications'],
+        projectLink: 'https://apps.odoo.com/apps/modules/19.0/telegram_notification'
+      },
+      {
+        imgSrc: './img/theme7.png',
+        title: 'Theme7 Premium Website Theme',
+          tags: ['Odoo', 'Website', 'Theme'],
+        projectLink: 'https://apps.odoo.com/apps/themes/19.0/theme7'
       }
   
   ];
