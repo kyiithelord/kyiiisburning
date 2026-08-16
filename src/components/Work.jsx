@@ -39,6 +39,12 @@ const works = [
         title: 'Theme7 Premium Website Theme',
           tags: ['Odoo', 'Website', 'Theme'],
         projectLink: 'https://apps.odoo.com/apps/themes/19.0/theme7'
+      },
+      {
+        imgSrc: './img/discord.png',
+        title: 'Discord Odoo Integration',
+          tags: ['Odoo', 'Discord', 'Integration'],
+        projectLink: 'https://apps.odoo.com/apps/modules/19.0/discord_odoo'
       }
   
   ];
