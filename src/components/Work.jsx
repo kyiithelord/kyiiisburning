@@ -29,7 +29,7 @@ const works = [
         projectLink: 'https://apps.odoo.com/apps/modules/19.0/pos_offline_sync_smart'
       },
       {
-        imgSrc: './img/telegram_noti.png',
+        imgSrc: './img/telegram_odoo.jpg',
         title: 'Telegram Notification Center',
           tags: ['Odoo', 'Telegram', 'Notifications'],
         projectLink: 'https://apps.odoo.com/apps/modules/19.0/telegram_notification'
